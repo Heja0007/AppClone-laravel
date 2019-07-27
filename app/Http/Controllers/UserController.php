@@ -57,4 +57,7 @@ class UserController extends Controller
         $user = $model->all();
         return json_encode($user);
     }
+
+
+
 }

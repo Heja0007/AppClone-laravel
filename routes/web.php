@@ -23,5 +23,5 @@ Route::get('/home', 'HomeController@index')->name('home');
 //Route::post('api/testing' , 'UserController@flutterLogin');
 Route::post('api/flutter/login/{userID?}','UserController@flutterLogin');
 
-Route::post('api/test' , 'UserController@getuserlist');
+Route::get('api/test' , 'UserController@getuserlist');
 

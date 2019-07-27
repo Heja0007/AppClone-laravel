@@ -20,8 +20,10 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 
 //Route::post('all-Users', 'UserController@getAllUsers');
 
+Route::get('district/{id?}' , 'DistrictController@getDistrict');
 
+Route::get('local/{id?}' , 'LocalGovtController@getLocal');
 
-
+Route::get('state' , 'StateController@GetStates');
 
 Route::post('log', 'UserController@login');

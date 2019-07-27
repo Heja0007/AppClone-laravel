@@ -2,6 +2,8 @@
 
 namespace App\Providers;
 
+use App\Repositories\StatesRepository;
+use App\Repositories\StatesRepositoryImpl;
 use App\Repositories\UserRepository;
 use App\Repositories\UserRepositoryImpl;
 use Illuminate\Support\ServiceProvider;
@@ -17,6 +19,7 @@ class AppServiceProvider extends ServiceProvider
     public function register()
     {
         $this->app->singleton(UserRepository::class, UserRepositoryImpl::class);
+        $this->app->singleton(StatesRepository::class, StatesRepositoryImpl::class);
     }
 
     /**
@@ -26,6 +29,6 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-
+        schema::defaultStringLength(191);
     }
 }

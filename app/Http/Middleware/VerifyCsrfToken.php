@@ -20,8 +20,9 @@ class VerifyCsrfToken extends Middleware
      */
     protected $except = [
         'stripe/*',
-        'http://192.168.100.222/CloneApp/public/login',
-        'http://192.168.100.222/CloneApp/public/api/flutter/login',
-        'http://192.168.100.222/CloneApp/public/api/test',
+        'http://192.168.0.105/CloneApp/public/login',
+        'http://192.168.0.105/CloneApp/public/api/flutter/login',
+        'http://192.168.0.105/CloneApp/public/api/test',
+
     ];
 }
